@@ -35,7 +35,7 @@
   </Target>
 
   <PropertyGroup>
-    <DefineConstants>$(DefineConstants);COMMAND_PUBLIC;PEFILE_PUBLIC;PERFVIEW;SUPPORT_V1_V2</DefineConstants>
+    <DefineConstants>TRACE;COMMAND_PUBLIC;PEFILE_PUBLIC;PERFVIEW;SUPPORT_V1_V2;SIGNING_BUILD</DefineConstants>
     <NoWarn>$(NoWarn),0649,0618</NoWarn>
   </PropertyGroup>
 
@@ -177,5 +177,6 @@
     <SignAssembly Condition="'$(SIGNING_BUILD)'!= ''">true</SignAssembly>
     <DelaySign>true</DelaySign>
     <AssemblyOriginatorKeyFile>..\MSFT.snk</AssemblyOriginatorKeyFile>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
 </Project>

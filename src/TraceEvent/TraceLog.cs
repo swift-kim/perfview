@@ -2909,7 +2909,7 @@ namespace Microsoft.Diagnostics.Tracing.Etlx
         {
             if (pointerSize == 4)
             {
-                return ip >= 0x80000000;
+                return ip > 0xFFFFFFFF; // Should be modified.
             }
 
             return ip >= 0xFFFF000000000000;        // TODO I don't know what the true cutoff is.  
